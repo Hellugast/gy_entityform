@@ -53,14 +53,13 @@ namespace gy_entityform
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //DataGridViewRow row = this.dataGridView1.SelectedRows[0];
-            //var id = row.Cells["Id"].Value;
-            //var item = _context.Set<Supplier>().Where(i => i.Id == 3);
-            //_context.Remove(item);
-
-            //var deletedItem = _context.Entry(item);
-            //deletedItem.State = EntityState.Deleted;
-            //dbContextShop.SaveChanges();
+            var id = int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
+            var getContext = dbContextShop.Suppliers.ToList();
+            var deletedContext = getContext.Where(s => s.Id == id).FirstOrDefault();
+            dbContextShop.Suppliers.Remove(deletedContext);
+            dbContextShop.SaveChanges();
+            cleanUp();
+            loadGridView();
         }
     }
 }

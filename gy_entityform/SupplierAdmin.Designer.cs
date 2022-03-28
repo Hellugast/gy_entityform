@@ -46,6 +46,7 @@ namespace gy_entityform
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(415, 252);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -124,6 +125,7 @@ namespace gy_entityform
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.dataGridView1);
             this.Name = "SupplierAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SupplierAdmin";
             this.Load += new System.EventHandler(this.SupplierAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
