@@ -60,7 +60,6 @@ namespace gy_entityform
             dbContextShop.SaveChanges();
             cleanUp();
             loadGridView();
-
         }
     }
 }
